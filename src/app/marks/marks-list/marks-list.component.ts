@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MarksService } from '../marks.service';
+import { MarksService } from '../services/marks.service';
 
 @Component({
   selector: 'app-marks-list',
@@ -8,7 +8,7 @@ import { MarksService } from '../marks.service';
 })
 export class MarksListComponent implements OnInit {
 
-  marks: any[];
+  marks: any[]=[];
 
   constructor(private marksService: MarksService) { }
 
@@ -19,7 +19,7 @@ export class MarksListComponent implements OnInit {
   }
 
   deleteMark(markId: number) {
-    this.marksService.deleteMark(markId).subscribe(() => {
+    this.marksService.deleteMarksByStudentId(markId).subscribe(() => {
       // Remove the deleted mark from the list
       this.marks = this.marks.filter(mark => mark.id !== markId);
     });

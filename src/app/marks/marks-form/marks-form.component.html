@@ -1,7 +1,16 @@
-<form (submit)="saveMark()">
-    <input type="text" placeholder="Subject" [(ngModel)]="mark.subject" name="subject" required><br>
-    <input type="text" placeholder="Semester" [(ngModel)]="mark.semester" name="semester" required><br>
-    <input type="number" placeholder="CGPA" [(ngModel)]="mark.cgpa" name="cgpa" required><br>
-    <button type="submit">Save</button>
-  </form>
-  
+<!-- marks-form.component.html -->
+<form (ngSubmit)="saveMark()">
+  <div>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" [(ngModel)]="marks.subject" required>
+  </div>
+  <div>
+    <label for="semester">Semester:</label>
+    <input type="number" id="semester" name="semester" [(ngModel)]="marks.semester" required>
+  </div>
+  <div>
+    <label for="cgpa">CGPA:</label>
+    <input type="number" id="cgpa" name="cgpa" [(ngModel)]="marks.cgpa" required>
+  </div>
+  <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Mark</button>
+</form>

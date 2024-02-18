@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TeacherService } from '../teacher.service';
+import { TeacherService } from '../services/teacher.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-list',
@@ -8,9 +9,9 @@ import { TeacherService } from '../teacher.service';
 })
 export class TeacherListComponent implements OnInit {
 
-  teachers: any[];
+  teachers: any[] = []; // Initialize the property here
 
-  constructor(private teacherService: TeacherService) { }
+  constructor(private teacherService: TeacherService, private router: Router) { }
 
   ngOnInit(): void {
     this.teacherService.getAllTeachers().subscribe((data: any[]) => {
@@ -23,6 +24,14 @@ export class TeacherListComponent implements OnInit {
       // Remove the deleted teacher from the list
       this.teachers = this.teachers.filter(teacher => teacher.id !== teacherId);
     });
+  }
+
+  goToTeacherDetails(teacherId: number) {
+    this.router.navigate(['/teachers', teacherId]);
+  }
+
+  goToAddTeacher() {
+    this.router.navigate(['/teachers/add']);
   }
 
 }

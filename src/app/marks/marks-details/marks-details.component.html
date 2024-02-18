@@ -1,6 +1,15 @@
-<div *ngIf="mark">
-    <p>Subject: {{ mark.subject }}</p>
-    <p>Semester: {{ mark.semester }}</p>
-    <p>CGPA: {{ mark.cgpa }}</p>
-  </div>
-  
+<div *ngIf="marks">
+  <h1>Marks Details for Student {{ marks.studentName }}</h1>
+  <table>
+    <tr>
+      <th>Subject</th>
+      <th>Semester</th>
+      <th>CGPA</th>
+    </tr>
+    <tr *ngFor="let mark of marks.marks">
+      <td>{{ mark.subject }}</td>
+      <td>{{ mark.semester }}</td>
+      <td>{{ mark.cgpa }}</td>
+    </tr>
+  </table>
+</div>

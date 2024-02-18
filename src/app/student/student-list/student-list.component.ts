@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../student.service';
+import { StudentService } from '../services/student.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class StudentListComponent implements OnInit {
 
-  students: any[];
+  //students: any[];
+  students: any[] = [];
 
   constructor(private studentService: StudentService, private router: Router) { }
 
@@ -27,11 +28,11 @@ export class StudentListComponent implements OnInit {
   }
 
   goToStudentDetails(studentId: number) {
-    this.router.navigate(['/student', studentId]);
+    this.router.navigate(['/students', studentId]);
   }
 
   goToAddStudent() {
-    this.router.navigate(['/student/add']);
+    this.router.navigate(['/students/add']);
   }
 
 }

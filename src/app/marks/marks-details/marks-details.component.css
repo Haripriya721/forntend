@@ -1,0 +1,41 @@
+/* marks-details.component.css */
+
+/* Overall styles for the marks details component */
+:host {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Styles for the heading */
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Styles for table headers */
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Styles for table cells */
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Styles for alternate row colors */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

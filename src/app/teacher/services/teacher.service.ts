@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Teacher } from './teacher'; // Assuming you have a Teacher interface
+import { Teacher } from '../../models/teacher.model'; // Assuming you have a Teacher interface
 
 @Injectable({
   providedIn: 'root'

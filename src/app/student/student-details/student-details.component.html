@@ -1,7 +1,19 @@
 <div *ngIf="student">
-    <p>Name: {{ student.name }}</p>
-    <p>Contact: {{ student.contact }}</p>
-    <p>Email: {{ student.email }}</p>
-    <p>Enroll Year: {{ student.enrollYear }}</p>
+  <h1>Student Details</h1>
+  <div>
+    <label>Name:</label>
+    <span>{{ student.name }}</span>
   </div>
-  
+  <div>
+    <label>Email:</label>
+    <span>{{ student.email }}</span>
+  </div>
+  <div>
+    <label>Contact:</label>
+    <span>{{ student.contact }}</span>
+  </div>
+  <div>
+    <label>Enroll Year:</label>
+    <span>{{ student.enrollYear }}</span>
+  </div>
+</div>

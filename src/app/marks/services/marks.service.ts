@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Marks } from 'src/app/models/marks.model'; // Assuming you have a Marks interface
+import { Marks } from '../../models/marks.model'; // Assuming you have a Marks interface
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,15 @@ export class MarksService {
     return this.http.get<Marks[]>(`${this.apiUrl}/getMarks`);
   }
 
-  getMarksByStudentId(id: number): Observable<Marks[]> {
-    return this.http.get<Marks[]>(`${this.apiUrl}/getMarks/${id}`);
+  getMarksByStudentId(studentId: number): Observable<Marks[]> {
+    return this.http.get<Marks[]>(`${this.apiUrl}/getMarks/${studentId}`)
   }
+
+  /*getMarksByStudentId(studentId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/getMarks/${studentId}`);
+  }*/
+
+  
 
   updateMarks(id: number, marks: Marks): Observable<Marks> {
     return this.http.put<Marks>(`${this.apiUrl}/updateMarks/${id}`, marks);

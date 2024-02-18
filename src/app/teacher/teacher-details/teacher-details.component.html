@@ -1,7 +1,9 @@
 <div *ngIf="teacher">
-    <p>Name: {{ teacher.name }}</p>
-    <p>Contact: {{ teacher.contact }}</p>
-    <p>Email: {{ teacher.email }}</p>
-    <p>Subject: {{ teacher.subject }}</p>
-  </div>
-  
+  <h2>Teacher Details</h2>
+  <p><strong>ID:</strong> {{ teacher.id }}</p>
+  <p><strong>Name:</strong> {{ teacher.name }}</p>
+  <p><strong>Contact:</strong> {{ teacher.contact }}</p>
+  <p><strong>Email:</strong> {{ teacher.email }}</p>
+  <p><strong>Subject:</strong> {{ teacher.subject }}</p>
+  <button (click)="goBack()">Go Back</button>
+</div>

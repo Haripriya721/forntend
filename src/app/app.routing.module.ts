@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {  RouterModule, Routes } from '@angular/router';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
 import { StudentFormComponent } from './student/student-form/student-form.component';
@@ -24,11 +24,14 @@ const routes: Routes = [
   { path: 'marks/:id', component: MarksDetailsComponent },
   { path: 'marks/:id/edit', component: MarksFormComponent },
   { path: '', redirectTo: '/students', pathMatch: 'full' },
-  { path: '**', redirectTo: '/students', pathMatch: 'full' }
+  { path: '**', redirectTo: '/students', pathMatch: 'prefix' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export { routes };

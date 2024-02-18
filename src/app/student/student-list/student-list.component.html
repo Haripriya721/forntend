@@ -1,7 +1,29 @@
-<!-- student-list.component.html -->
 <div class="student-list">
-    <div *ngFor="let student of students" class="student-item">
-      <p>{{ student.name }} <button class="delete-button" (click)="deleteStudent(student.id)">Delete</button></p>
-    </div>
-  </div>
-  
+  <h1>Student List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Enroll Year</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.contact }}</td>
+        <td>{{ student.enrollYear }}</td>
+        <td>
+          <button (click)="goToStudentDetails(student.id)">View</button>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="goToAddStudent()">Add Student</button>
+</div>

@@ -1,4 +1,17 @@
-<div *ngFor="let mark of marks">
-    <p>{{ mark.subject }} - {{ mark.semester }} - {{ mark.cgpa }} <button (click)="deleteMark(mark.id)">Delete</button></p>
-  </div>
-  
+<h1>Marks List</h1>
+<table>
+  <tr>
+    <th>Student ID</th>
+    <th>Subject</th>
+    <th>Semester</th>
+    <th>CGPA</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let mark of marks">
+    <td>{{ mark.studentId }}</td>
+    <td>{{ mark.subject }}</td>
+    <td>{{ mark.semester }}</td>
+    <td>{{ mark.cgpa }}</td>
+    <td><button (click)="deleteMark(mark.id)">Delete</button></td>
+  </tr>
+</table>

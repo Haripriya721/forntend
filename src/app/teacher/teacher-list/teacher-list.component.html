@@ -1,4 +1,25 @@
-<div *ngFor="let teacher of teachers">
-    <p>{{ teacher.name }} <button (click)="deleteTeacher(teacher.id)">Delete</button></p>
-  </div>
-  
+<h1>Teachers</h1>
+
+<button (click)="goToAddTeacher()">Add Teacher</button>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let teacher of teachers">
+    <td>{{ teacher.id }}</td>
+    <td>{{ teacher.name }}</td>
+    <td>{{ teacher.contact }}</td>
+    <td>{{ teacher.email }}</td>
+    <td>{{ teacher.subject }}</td>
+    <td>
+      <button (click)="goToTeacherDetails(teacher.id)">Details</button>
+      <button (click)="deleteTeacher(teacher.id)">Delete</button>
+    </td>
+  </tr>
+</table>
