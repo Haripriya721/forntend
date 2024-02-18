@@ -1,0 +1,7 @@
+<form (submit)="saveMark()">
+    <input type="text" placeholder="Subject" [(ngModel)]="mark.subject" name="subject" required><br>
+    <input type="text" placeholder="Semester" [(ngModel)]="mark.semester" name="semester" required><br>
+    <input type="number" placeholder="CGPA" [(ngModel)]="mark.cgpa" name="cgpa" required><br>
+    <button type="submit">Save</button>
+  </form>
+  

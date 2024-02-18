@@ -1,0 +1,7 @@
+<!-- student-list.component.html -->
+<div class="student-list">
+    <div *ngFor="let student of students" class="student-item">
+      <p>{{ student.name }} <button class="delete-button" (click)="deleteStudent(student.id)">Delete</button></p>
+    </div>
+  </div>
+  

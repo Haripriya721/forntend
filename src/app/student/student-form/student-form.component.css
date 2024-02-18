@@ -1,0 +1,31 @@
+/* Add styles here for student-form component */
+
+.student-form {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .student-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .student-form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .student-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .student-form button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,18 @@
+/* student-list.component.css */
+.student-list {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .student-item {
+    margin-bottom: 5px;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

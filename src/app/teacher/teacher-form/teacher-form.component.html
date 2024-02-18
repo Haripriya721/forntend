@@ -1,0 +1,8 @@
+<form (submit)="saveTeacher()">
+    <input type="text" placeholder="Name" [(ngModel)]="teacher.name" name="name" required><br>
+    <input type="text" placeholder="Contact" [(ngModel)]="teacher.contact" name="contact" required><br>
+    <input type="email" placeholder="Email" [(ngModel)]="teacher.email" name="email" required><br>
+    <input type="text" placeholder="Subject" [(ngModel)]="teacher.subject" name="subject" required><br>
+    <button type="submit">Save</button>
+  </form>
+  

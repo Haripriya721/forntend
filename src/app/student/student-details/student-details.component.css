@@ -1,0 +1,16 @@
+/* Add styles here for student-details component */
+
+.student-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .student-details h2 {
+    margin-bottom: 5px;
+  }
+  
+  .student-details p {
+    margin: 5px 0;
+  }
+  

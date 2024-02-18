@@ -1,0 +1,8 @@
+<form (submit)="saveStudent()">
+    <input type="text" placeholder="Name" [(ngModel)]="student.name" name="name" required><br>
+    <input type="text" placeholder="Contact" [(ngModel)]="student.contact" name="contact" required><br>
+    <input type="email" placeholder="Email" [(ngModel)]="student.email" name="email" required><br>
+    <input type="text" placeholder="Enroll Year" [(ngModel)]="student.enrollYear" name="enrollYear" required><br>
+    <button type="submit">Save</button>
+  </form>
+  
